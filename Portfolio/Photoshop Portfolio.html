@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio – Photoshop Projects</title>
+<style>
+:root{--bg:#e8e9ec;--panel:#fff;--ink:#1c1e22;--mute:#667;--line:#d3d5da;--acc:#1473e6;--accInk:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1e21;--panel:#2a2b30;--ink:#ececf0;--mute:#9a9ba5;--line:#3b3d44;--acc:#4da3ff;--accInk:#0b1522}}
+:root[data-theme="dark"]{--bg:#1d1e21;--panel:#2a2b30;--ink:#ececf0;--mute:#9a9ba5;--line:#3b3d44;--acc:#4da3ff;--accInk:#0b1522}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,sans-serif}
+h1,h2,h3{font-family:"Trebuchet MS","Segoe UI",sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;align-items:center;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);overflow-x:auto}
+.bar b{margin-right:auto;white-space:nowrap}
+.bar a{padding:6px 12px;border-radius:6px;text-decoration:none;white-space:nowrap}
+.bar a:hover{background:var(--bg)}
+.bar button{border:1px solid var(--line);background:none;border-radius:6px;padding:5px 10px}
+section{max-width:1080px;margin:0 auto;padding:72px 20px}
+.hero{padding-top:96px}
+.hero h1{font-size:clamp(2.6rem,9vw,5.6rem);letter-spacing:-.03em;max-width:12ch}
+.hero p{max-width:46ch;color:var(--mute);font-size:1.15rem;margin:20px 0 28px}
+.btn{display:inline-block;background:var(--acc);color:var(--accInk);border:0;border-radius:8px;padding:11px 20px;font-weight:600;text-decoration:none}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+h2{font-size:2rem;margin-bottom:8px}
+.sub{color:var(--mute);margin:0 0 24px;max-width:56ch}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;align-items:center}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 14px}
+.chip[aria-pressed="true"]{background:var(--acc);color:var(--accInk);border-color:var(--acc)}
+.tools .btn{margin-left:auto;padding:8px 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;position:relative}
+.card.off .thumb{opacity:.12;filter:grayscale(1)}
+.thumb{display:block;width:100%;aspect-ratio:4/3;border:0;padding:0;background-size:cover;background-position:center}
+.meta{padding:12px 14px}
+.meta h3{font-size:1.05rem}
+.meta span{color:var(--mute);font-size:.9rem}
+.eye,.del{position:absolute;top:8px;border:0;border-radius:6px;background:rgba(0,0,0,.55);color:#fff;width:34px;height:34px;font-size:1rem}
+.eye{right:8px}.del{right:48px}
+.empty{color:var(--mute);padding:30px 0}
+.lb{position:fixed;inset:0;background:rgba(10,10,12,.88);display:none;align-items:center;justify-content:center;z-index:20;padding:20px}
+.lb.on{display:flex}
+.lb figure{margin:0;max-width:min(980px,100%);color:#fff;text-align:center}
+.lb .img{width:min(900px,90vw);aspect-ratio:4/3;max-height:70vh;background-size:contain;background-repeat:no-repeat;background-position:center;border-radius:8px}
+.lb figcaption{margin-top:12px}
+.lb button{position:absolute;background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.3rem}
+.lb .x{top:calc(14px + env(safe-area-inset-top,0px));right:14px}.lb .p{left:12px;top:50%}.lb .n{right:12px;top:50%}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);max-width:420px;width:92%}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+label{display:block;margin:12px 0 4px;font-weight:600;font-size:.9rem}
+input,select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.row{display:flex;gap:10px;margin-top:18px;justify-content:flex-end}
+.about{display:grid;gap:28px;grid-template-columns:1fr}
+@media(min-width:760px){.about{grid-template-columns:1.3fr 1fr}}
+.skills{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none;margin:0}
+.skills li{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:5px 12px}
+footer{text-align:center;color:var(--mute);padding:40px 20px 60px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="bar" aria-label="Main">
+  <b>Your Name</b>
+  <a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  <button id="theme" aria-label="Toggle light or dark theme">Theme</button>
+</nav>
+
+<section class="hero">
+  <h1>Your Name, photo editor &amp; digital artist</h1>
+  <p>I build photo manipulations, posters, and edits in Photoshop. Browse my work below.</p>
+  <a class="btn" href="#projects">View projects</a> <a class="btn ghost" href="#contact">Hire me</a>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div>
+      <h2>About me</h2>
+      <p class="sub">Write 2–3 sentences about yourself here: where you're from, how long you've used Photoshop, and what kind of work you love doing.</p>
+    </div>
+    <div>
+      <h2 style="font-size:1.2rem">Tools I use</h2><br>
+      <ul class="skills"><li>Photoshop</li><li>Retouching</li><li>Compositing</li><li>Poster design</li><li>Color grading</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Click a project to view it larger. Use the eye button to hide a layer, like in Photoshop. Add your own with the button on the right.</p>
+  <div class="tools" id="filters"></div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>No projects in this category yet. Add one with “Add project”.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="sub">Open for commissions and collabs. Replace the links below with your own.</p>
+  <a class="btn" href="mailto:you@example.com">you@example.com</a>
+  <a class="btn ghost" href="#">Facebook</a> <a class="btn ghost" href="#">Instagram</a>
+</section>
+<footer>© <span id="yr"></span> Your Name</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project viewer">
+  <button class="x" id="lx" aria-label="Close">✕</button>
+  <button class="p" id="lp" aria-label="Previous">‹</button>
+  <button class="n" id="ln" aria-label="Next">›</button>
+  <figure><div class="img" id="li"></div><figcaption id="lc"></figcaption></figure>
+</div>
+
+<dialog id="dlg">
+  <h3>Add project</h3>
+  <label for="f-img">Image (JPG or PNG export from Photoshop)</label>
+  <input id="f-img" type="file" accept="image/*">
+  <label for="f-title">Title</label>
+  <input id="f-title" placeholder="Project name">
+  <label for="f-cat">Category</label>
+  <select id="f-cat"><option>Photo manipulation</option><option>Poster</option><option>Retouching</option><option>Logo &amp; branding</option><option>Other</option></select>
+  <div class="row"><button class="btn ghost" id="f-cancel">Cancel</button><button class="btn" id="f-save">Add project</button></div>
+</dialog>
+
+<script>
+// EDIT HERE: to use files hosted on your own site, set img to a URL like "images/my-poster.jpg"
+let projects = [
+  {title:"Sample: Sunset composite",cat:"Photo manipulation",bg:"linear-gradient(135deg,#ff8a3d,#c2185b 55%,#3a1c71)"},
+  {title:"Sample: Event poster",cat:"Poster",bg:"linear-gradient(160deg,#00c6ff,#0072ff 60%,#001a4d)"},
+  {title:"Sample: Portrait retouch",cat:"Retouching",bg:"linear-gradient(120deg,#f6d365,#fda085)"},
+  {title:"Sample: Brand logo",cat:"Logo & branding",bg:"linear-gradient(145deg,#43e97b,#38f9d7 50%,#0b5345)"}
+];
+try{const s=localStorage.getItem("pf-projects");if(s)projects=JSON.parse(s)}catch(e){}
+let cat="All",cur=0,list=[];
+const $=id=>document.getElementById(id);
+const bgOf=p=>p.img?`url("${p.img}")`:p.bg;
+function save(){try{localStorage.setItem("pf-projects",JSON.stringify(projects))}catch(e){alert("Browser storage is full, so this project won't be saved after refresh. Use a smaller image or host it on your site.")}}
+function render(){
+  const cats=["All",...new Set(projects.map(p=>p.cat))];
+  if(!cats.includes(cat))cat="All";
+  $("filters").innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join("")+`<button class="btn" id="add">Add project</button>`;
+  list=projects.map((p,i)=>({...p,i})).filter(p=>cat==="All"||p.cat===cat);
+  $("empty").hidden=list.length>0;
+  $("grid").innerHTML=list.map((p,k)=>`<article class="card ${p.off?"off":""}">
+    <button class="thumb" data-v="${k}" style="background-image:${bgOf(p)}" aria-label="View ${esc(p.title)}"></button>
+    <button class="eye" data-e="${p.i}" aria-label="Show or hide ${esc(p.title)}">${p.off?"🙈":"👁"}</button>
+    <button class="del" data-d="${p.i}" aria-label="Delete ${esc(p.title)}">🗑</button>
+    <div class="meta"><h3>${esc(p.title)}</h3><span>${esc(p.cat)}</span></div></article>`).join("");
+  $("grid").querySelectorAll(".thumb").forEach(t=>{const p=list[t.dataset.v];t.style.backgroundImage=bgOf(p)});
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function show(k){cur=(k+list.length)%list.length;const p=list[cur];$("li").style.backgroundImage=bgOf(p);$("lc").textContent=p.title+" · "+p.cat;$("lb").classList.add("on");$("lx").focus()}
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button");if(!t)return;
+  if(t.dataset.c){cat=t.dataset.c;render()}
+  else if(t.dataset.v!==undefined)show(+t.dataset.v);
+  else if(t.dataset.e!==undefined){projects[+t.dataset.e].off=!projects[+t.dataset.e].off;save();render()}
+  else if(t.dataset.d!==undefined){if(confirm("Delete this project?")){projects.splice(+t.dataset.d,1);save();render()}}
+  else if(t.id==="add")$("dlg").showModal();
+});
+$("lx").onclick=()=>$("lb").classList.remove("on");
+$("lp").onclick=()=>show(cur-1);$("ln").onclick=()=>show(cur+1);
+$("lb").onclick=e=>{if(e.target.id==="lb")$("lb").classList.remove("on")};
+document.addEventListener("keydown",e=>{if(!$("lb").classList.contains("on"))return;
+  if(e.key==="Escape")$("lx").click();if(e.key==="ArrowLeft")show(cur-1);if(e.key==="ArrowRight")show(cur+1)});
+$("f-cancel").onclick=()=>$("dlg").close();
+$("f-save").onclick=()=>{
+  const f=$("f-img").files[0];if(!f){alert("Choose an image first.");return}
+  const r=new FileReader();
+  r.onload=()=>{
+    const im=new Image();
+    im.onload=()=>{ // shrink to 1400px so it fits in browser storage
+      const s=Math.min(1,1400/Math.max(im.width,im.height)),c=document.createElement("canvas");
+      c.width=im.width*s;c.height=im.height*s;c.getContext("2d").drawImage(im,0,0,c.width,c.height);
+      projects.unshift({title:$("f-title").value.trim()||"Untitled",cat:$("f-cat").value,img:c.toDataURL("image/jpeg",.82)});
+      save();cat="All";render();$("dlg").close();$("f-img").value="";$("f-title").value="";
+    };
+    im.src=r.result;
+  };
+  r.readAsDataURL(f);
+};
+$("theme").onclick=()=>{const d=document.documentElement,dark=matchMedia("(prefers-color-scheme:dark)").matches;
+  const now=d.dataset.theme||(dark?"dark":"light");d.dataset.theme=now==="dark"?"light":"dark"};
+$("yr").textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
